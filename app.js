@@ -17,6 +17,11 @@ function draw() {
     ctx.font = "50px cursive";
     ctx.fillStyle = "red";
     ctx.fillText("GAME OVER !!!", 320, 300);
+    ctx.fillText(`YOUR SCORE IS ${score}`, 320, 500);
+
+    const audio = new Audio();
+    audio.src = "./media/song1.mp3";
+    audio.play();
     return;
   }
   // draw snake
@@ -111,4 +116,4 @@ function khudEat(newHeadX, newHeadY) {
 let id = setInterval(function () {
   draw();
   update();
-}, 50);
+}, 100);
